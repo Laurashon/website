@@ -13,6 +13,10 @@
         --columnWidth: calc(100vw / var(--columnsAmount));
       }
 
+      html {
+        font-size: 100%;
+      }
+
       body {
         margin: 0;
         font-family: 'Julius Sans One', sans-serif;
@@ -70,13 +74,27 @@
 
     <div class="grid"></div>
 
-    <script type="text/javascript" src="posts.js"></script>
-    <script type="text/javascript" src="grid.js"></script>
-
     <footer class="mainFooter">
-      <a class="link" href="https://codesandbox.io/s/admiring-kowalevski-dx4b5" target="_blank">
+      <a class="link" href="https://www.linkedin.com/in/laura-shon-0a00a488/" target="_blank">
         Contact
       </a>
     </footer>
+
+    <script type="text/javascript" src="posts.js"></script>
+    <script type="text/javascript">
+      const grid = document.querySelector('.grid')
+
+      posts.map((post) => {
+        let cell = document.createElement('div')
+        
+        cell.className = 'gridItem'
+        cell.style = `
+          --columnsAmount: ${post.size};
+          background-image: url(images/${post.name});
+        `
+        
+        grid.appendChild(cell)
+      })
+    </script>
   </body>
 </html>
