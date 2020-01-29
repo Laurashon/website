@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laura Shon – Illustration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+      * { box-sizing: border-box; }
+
+      :root {
+        --columnsAmount: 6;
+        --columnWidth: calc(100vw / var(--columnsAmount));
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Julius Sans One', sans-serif;
+        color: #555;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .gridItem {
+        width: calc(var(--columnsAmount) * var(--columnWidth));
+        height: calc(2 * var(--columnWidth));
+        background-size: cover;
+        background-position: center;
+      }
+
+      .mainTitle {
+        margin: 5rem 0;
+        text-align: center;
+        font-weight: 400;
+      }
+
+      .mainTitle span {
+        font-size: 1rem;
+        letter-spacing: 0.15em;
+        display: block;
+        margin-bottom: 0.5em;
+      }
+
+      .mainFooter {
+        text-align: center;
+        margin: 4rem 0;
+      }
+
+      .link {
+        color: inherit;
+        text-underline-position: under;
+        text-decoration-color: #bbb;
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <header class="mainHeader">
+      <h1 class="mainTitle">
+        <span>Illustrations by</span>
+        Laura Shon
+      </h1>
+    </header>
+
+    <div class="grid"></div>
+
+    <script type="text/javascript" src="posts.js"></script>
+    <script type="text/javascript" src="grid.js"></script>
+
+    <footer class="mainFooter">
+      <a class="link" href="https://codesandbox.io/s/admiring-kowalevski-dx4b5" target="_blank">
+        Contact
+      </a>
+    </footer>
+  </body>
+</html>
